@@ -1,0 +1,18 @@
+1. nice music.
+2. every event tune.
+3. user Title to collect coins(coins are created based on the time user spends on the app and no ads they see on that).
+4. user gets access to withdraw money once a minimum number of coins is reached.
+5. Batting system (user can get coins by purchasing or watching the ads these coins can be later on used for in-game punches and batting, note***: - batting amount must be fixed by the game, and the player can be matched based on that ).
+6. Every user will have their own profile in will they can see several subsections:
+    a. name 
+    b. profile pic
+    c. account (coins inner subsection add, wait for the ads withdraw)
+    d. friends (add, remove)
+    f. invite another player (subsection:- all friends with their status active, offline, solo match, and other(subsection:- another online player across the gaming free or batting ).
+7. there will be two options to purchase the game 1. free and 2. subscription
+	a. free users will get a minimum of free coins every day(this will be only activated once the user spends minimum time on the game it will be counted)  and also fue extra coins on every ad watch user and watch ads to add the extra coins one user can watch only minimum no of ads continuously if they don't have sufficient coins timmer will be set for next continues ads watch.
+ 
+8. offline game users can play offline with a minimum of two and max of four this will not be added to the time spent to get the coin.
+9. sharing the app with users' referrals can give additional coins to both users.
+10. Users can send coins and other in-game gifts to other users.
+11. we will have all the right to declare the coins invalid in the future user can't demand any kind of money instead of that.        

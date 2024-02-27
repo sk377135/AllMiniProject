@@ -1,0 +1,20 @@
+E-commerce :
+ 1. user page with SignUp and SignIn opinion.
+ 2. user profile, cart, payment, History purchases.
+ 3. pages will be :
+      a. Home page 
+	b. user page
+	c. categories
+	d. cart
+ 4. sub-Header
+	a. home 	
+	b. Electronics
+	c. Health
+	d. sell
+	e. Buy Again
+ 5. other home page body subsection
+	
+ 6. Footer details 
+
+ 
+	

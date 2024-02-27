@@ -1,0 +1,7 @@
+Calculator:
+ 1. this will be a simple calculator with all the features of a calculator.
+ 2. this calculator calculates time, weight, length, and others with a different unit.
+ 3. 70% of the page there will be a blog explaining the concept and formula related. 
+ 4. google ads and other features to earn revenue.
+ 5. it will have a server and hosting platform. 
+ 

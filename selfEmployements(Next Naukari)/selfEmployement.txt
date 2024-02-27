@@ -1,0 +1,17 @@
+SelfEmployment website :
+
+
+Note ***: this is a hassle-free app to find work or a job and is very simple so technical and non-tech people can assess very easily.
+
+
+ 1. this will be a revolution in the field of self-employment for the people who are uneducated or underEducated This app will be much simpler than youtube or Instagram, once the User signs up and sign-In they have a small video explaining the work and the max bid amount given by the people in need.
+
+ 2. User can swap left if he or she is not interested in that bidding or swap right if a user is interested then all the details regarding the work will be shown to the user. they will have the option to input their max bidding, ok (which means agreeing with customers' bidding app will automatically select customer bid), and not interested in the work.
+
+3. Once the user bids for the work customer will have access to all the user's contact details, address, and bidding amount customer can contact directly to the user.
+
+4. App will be free for all customer user will have to watch the ads or minimum subscription to get or find the respective job it will be available in both regional, Hindi, and English.
+
+5. every user will have a rating based on their feedback from the customers, user and also report any fraud, misbehaving or the customer but the user will not able to see that, In the backend Every user will damage the customer's reputation, complaints raised by the several users and eventually ban the customer to post anymore work on the platform.
+   
+6. If the work is professional then all HR(customers) have to just post a video explaining the work. If the user is interested then just swap right fill the form with all professional details and resume. LaterOn HR will have contact and professional details of all the interested candidates. 

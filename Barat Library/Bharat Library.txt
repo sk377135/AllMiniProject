@@ -1,0 +1,35 @@
+Bharat Library::
+
+1. it is going to be a nationwide free Book store.
+2. this Library contains all kinds of free books, including (government books).
+3. Future Expansion 
+    
+    a. Every Book's single chapter and that chapter all topics video available.
+    b. All practical lab (at your nearest location) and sample project availability Project.
+    c. buy and sell all project-related products.
+     
+    
+4. feature required.
+
+    a. signup 
+    b. sign-in profile 
+    c. User Profile 
+    
+           1. recode the current books. 
+           2. completed book and Certification.
+           3. No question answer is solved on each topic and they're recorded.
+           4. if the user completes an assignment on any book recode will be shaved for that user.
+           5. Every student finds their school, college, and friend to compare.
+           6. Users can send and receive friend requests and compare themselves among the group.
+           7. User can select any chapter it will have options to read(pronounced auto-correct using audio), write(type), and normal mode(this will just be like normal book reading or assignment completing).
+           8. user can mark any topic or chapter as a favorite(it allows the user to revise the topic using read-write mode or study).
+           9. user pictures and other details using phone and email with feature to hide or show. 
+           10. Profile can be seen by the public, friends, and private.
+ 
+
+    d. Mobile App 
+    E. Web Page 
+    F. copyright (contract person profile) 
+    G. rating 
+    e. option for free and premium.
+    

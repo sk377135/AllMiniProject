@@ -1,0 +1,1 @@
+1. how to allow the user to creat their account using social media, find a friend, and add friend from social media.

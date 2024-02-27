@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Effect</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .header {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: #fff;
+      }
+
+      .image-container {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .scrolling-image {
+        width: 100px;
+        height: 100px;
+        opacity: 0.0001;
+        transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Scroll Effect Demo</h1>
+    </div>
+    <div>
+      <h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        libero nesciunt voluptates nobis repellat dolores officia dolorum
+        nostrum ullam eaque similique veniam sapiente reiciendis magni
+        repudiandae, beatae corporis in vel! Maiores velit porro blanditiis
+        libero? Explicabo perspiciatis, ducimus porro esse quae officia ipsa ab
+        architecto iusto voluptatum! Perspiciatis obcaecati laborum incidunt
+        quos est architecto, reiciendis a non excepturi ipsum libero? Quasi at
+        quae perferendis tempora adipisci saepe iusto, deserunt id odio
+        voluptatibus vitae magni consequatur ullam suscipit vel placeat error
+        illum commodi perspiciatis dolorum facilis provident! Tempora quidem hic
+        minima! Nulla quaerat voluptatem cumque ducimus fugit quo laboriosam
+        ullam sequi aliquid rerum, dolores sed nemo exercitationem aut
+        voluptates et natus, corporis vitae odit! Natus iure doloribus eius
+        debitis consequatur architecto? Dolores dolorem alias impedit corporis
+        esse tempore repellendus quae veritatis nemo consequatur excepturi quia
+        nesciunt fugiat, ratione reprehenderit atque dolore id! Alias enim sunt
+        iste asperiores! Tempore ab repellat dolor?
+      </h1>
+    </div>
+    <div class="image-container">
+      <img
+        src="../../Typing/Typing_code/resource/image/1705584228386.gif"
+        alt="Scrolly Image"
+        class="scrolling-image"
+        id="scrollImage"
+      />
+    </div>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const scrollImage = document.getElementById("scrollImage");
+        const scrollPercentage =
+          (document.documentElement.scrollTop + window.innerHeight) /
+          document.documentElement.scrollHeight;
+        const newWidth = 100 + scrollPercentage * 450; // 100px to 450px
+        const newHeight = 100 + scrollPercentage * 450; // 100px to 450px
+        const newOpacity = 0.01 + scrollPercentage * 0.9999; // 0.25 to 1
+
+        scrollImage.style.width = newWidth + "px";
+        scrollImage.style.height = newHeight + "px";
+        scrollImage.style.opacity = newOpacity;
+      });
+    </script>
+  </body>
+</html>
