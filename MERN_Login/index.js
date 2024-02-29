@@ -1,4 +1,3 @@
-import { log } from "console";
 import express from "express";
 import mongoose from "mongoose";
 import path from "path";
@@ -29,9 +28,18 @@ const message = mongoose.model("message", MERN_LOGIN_Schema);
 app.set("view engine", "ejs");
 
 app.use(express.static(path.join(path.resolve(), "public")));
+app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   res.render("index");
+});
+app.post("/add", (req, res) => {
+  const { name, email, password } = req.body;
+  message.create({ name, email, password });
+  res.redirect("/sucess");
+});
+app.get("/sucess", (req, res) => {
+  res.render("sucess");
 });
 app.listen("5000", () => {
   console.log("The server is running");
