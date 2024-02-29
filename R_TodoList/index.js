@@ -85,8 +85,7 @@
 import express from "express";
 import path from "path";
 import mongoose from "mongoose";
-import { name } from "ejs";
-import { log } from "console";
+
 //! mongodb://localhost:27017
 //!  mongodb://127.0.0.1:27017
 //! R_TodoList
