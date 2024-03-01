@@ -2,6 +2,21 @@
   margin: 0px;
   padding: 0px;
 }
-h1 {
+body {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form {
+  text-align: center;
+  width: 20rem;
+  border: 1px solid red;
+
+  flex-direction: column;
+  height: 15rem;
+}
+
+.error {
   color: red;
+  text-align: 1 rem;
 }
