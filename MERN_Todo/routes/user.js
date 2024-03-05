@@ -1,19 +1,23 @@
 import express from "express";
 import {
   allUser,
-  findSingle,
+  findProfile,
   login,
+  logout,
   registerUser,
 } from "../controller/user.js";
+import { isAuthenticated } from "../middlewares/auth.js";
 
 const router = express.Router();
 
-router.get("/api/v1/users/all", allUser);
+router.get("/users/all", allUser);
 
-router.post("/api/v1/user/login", login);
+router.post("/user/login", login);
 
-router.post("/api/v1/user/new", registerUser);
+router.post("/user/new", registerUser);
 
-router.get("/api/v1/userid/:id", findSingle);
+router.get("/user/me", isAuthenticated, findProfile);
+
+router.get("/user/logout", logout);
 
 export default router;

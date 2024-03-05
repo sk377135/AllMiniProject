@@ -1,10 +1,8 @@
 import { json } from "express";
 import { User } from "../model/user.js";
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
 import { config } from "dotenv";
 import { setCookies } from "../utils/feature.js";
-
 export const registerUser = async (req, res) => {
   // res.status(200).json({ sucess: true, message: "this is register" });
   ////? got the data from the front-end;
@@ -29,8 +27,39 @@ export const registerUser = async (req, res) => {
   setCookies(user, res, 201, "Register Sucessfully");
 };
 
-export const login = async (req, res) => {};
+export const login = async (req, res) => {
+  const { email, password } = req.body;
+  const user = await User.findOne({ email }).select("+password");
 
-export const findSingle = async (req, res) => {};
+  if (!user)
+    return res.status(404).json({
+      sucess: false,
+      message: "Invalid user or password",
+    });
+
+  const isMatch = await bcrypt.compare(password, user.password);
+  if (!isMatch)
+    return res
+      .status(404)
+      .json({ sucess: true, message: "Invalid user or password" });
+
+  setCookies(user, res, 200, `Welcome back ${user.name}`);
+};
+
+export const findProfile = (req, res) => {
+  res.status(200).json({
+    sucess: true,
+    user: req.user,
+  });
+};
+export const logout = async (req, res) => {
+  res
+    .status(200)
+    .cookie("token", " ", { expires: new Date(Date.now()) })
+    .json({
+      sucess: true,
+      message: "Logout Sucessfully",
+    });
+};
 
 export const allUser = async (req, res) => {};
