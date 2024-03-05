@@ -66,7 +66,7 @@ export const updateUser = async (req, res) => {
       replaced_user,
     });
   } catch (error) {
-    console.error(`Error replacing user: ${error}`);
+    console.log(`Error replacing user: ${error}`);
     res
       .status(500)
       .json({ message: "Internal Server Error", error: error.message });
