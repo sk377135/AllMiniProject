@@ -24,4 +24,4 @@ const MERN_Task_Schema = new mongoose.Schema({
   },
 });
 
-export const User = mongoose.model("Task", MERN_Task_Schema);
+export const Task = mongoose.model("Task", MERN_Task_Schema);

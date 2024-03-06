@@ -1,6 +1,5 @@
 import express from "express";
 import {
-  allUser,
   findProfile,
   login,
   logout,
@@ -10,14 +9,12 @@ import { isAuthenticated } from "../middlewares/auth.js";
 
 const router = express.Router();
 
-router.get("/users/all", allUser);
+router.post("/login", login);
 
-router.post("/user/login", login);
+router.post("/new", registerUser);
 
-router.post("/user/new", registerUser);
+router.get("/me", isAuthenticated, findProfile);
 
-router.get("/user/me", isAuthenticated, findProfile);
-
-router.get("/user/logout", logout);
+router.get("/logout", logout);
 
 export default router;
