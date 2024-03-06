@@ -9,7 +9,7 @@ export const setCookies = (user, res, status = 200, message) => {
     .cookie("token", token, {
       httpOnly: true,
       maxAge: 15 * 60 * 1000,
-      SameSite: process.env.NODE_ENV === "developement" ? LEX : none,
+      SameSite: process.env.NODE_ENV === "developement" ? "LEX" : "none",
       secure: process.env.NODE_ENV === "developement" ? false : true,
     })
     .json({
