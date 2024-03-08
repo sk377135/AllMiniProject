@@ -7,11 +7,12 @@ import toast from "react-hot-toast";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { isAuthenticated, setIsAuthenticated } = useContext(Context);
+  const { isAuthenticated, setIsAuthenticated, loading, setLoading } =
+    useContext(Context);
 
   const loginHandler = async e => {
     e.preventDefault();
-
+    setLoading(true);
     try {
       const { data } = await axios.post(
         `${server}/user/login`,
@@ -21,9 +22,11 @@ const Login = () => {
           withCredentials: true,
         }
       );
+      setLoading(false);
       toast.success(data.message);
       setIsAuthenticated(true);
     } catch (error) {
+      setLoading(false);
       toast.error(error.response.data.message);
       setIsAuthenticated(false);
     }
@@ -52,7 +55,9 @@ const Login = () => {
             name="password"
             placeholder="Password"
           />
-          <button type="submit">Login</button>
+          <button disabled={loading} type="submit">
+            Login
+          </button>
           <h2>Or</h2>
           <Link to="/Register">Register</Link>
         </form>
