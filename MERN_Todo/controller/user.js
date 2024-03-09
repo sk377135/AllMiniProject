@@ -59,16 +59,23 @@ export const findProfile = (req, res) => {
     user: req.user,
   });
 };
+
 export const logout = async (req, res) => {
   res
     .status(200)
-    .cookie("token", " ", {
-      expires: new Date(Date.now()),
-      SameSite: process.env.NODE_ENV === "developement" ? "LEX" : "none",
-      secure: process.env.NODE_ENV === "developement" ? false : true,
+    .cookie("token", "", {
+      expires: new Date(0), // Set expires to a past date
+      sameSite: process.env.NODE_ENV === "development" ? "Lax" : "None", // Use sameSite instead of SameSite
+      secure: process.env.NODE_ENV === "development" ? false : true,
+      httpOnly: true, // Set httpOnly to true for added security
+    })
+    .clearCookie("token", {
+      sameSite: process.env.NODE_ENV === "development" ? "Lax" : "None",
+      secure: process.env.NODE_ENV === "development" ? false : true,
+      httpOnly: true,
     })
     .json({
-      sucess: true,
-      message: "Logout Sucessfully",
+      success: true,
+      message: "Logout Successfully",
     });
 };
