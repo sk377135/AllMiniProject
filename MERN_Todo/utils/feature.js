@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-export const setCookies = (user, res, status = 200, message) => {
+export const setCookies = (user, res, message, status = 200) => {
   ////? simultaniouly login in the account ;
   const token = jwt.sign({ _id: user._id }, process.env.JWT_Secrate);
 
